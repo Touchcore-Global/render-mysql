@@ -1,23 +1,23 @@
 services:
 - type: pserv
-  name: mysql
+  name: miles-soap-staging-db
   plan: standard
   env: docker
   autoDeploy: false
   disk:
-    name: mysql
+    name: miles-soap-staging-db-disk
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
-  - fromGroup: mysql
+  - fromGroup: miles-soap-staging-db-env
 
 envVarGroups:
-- name: mysql
+- name: miles-soap-staging-db-env
   envVars:
   - key: MYSQL_DATABASE
-    value: mysql
+    value: miles-soap-staging-db
   - key: MYSQL_USER
-    value: mysql
+    value: miles-soap-staging-db-user
   - key: MYSQL_PASSWORD
     generateValue: true
   - key: MYSQL_ROOT_PASSWORD
