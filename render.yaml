@@ -1,23 +1,23 @@
 services:
 - type: pserv
-  name: miles-soap-live-db
+  name: render-wordpress-db
   plan: standard
   env: docker
   autoDeploy: false
   disk:
-    name: miles-soap-live-db-disk
+    name: render-wordpress-db-disk
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
-  - fromGroup: miles-soap-live-db-env
+  - fromGroup: render-wordpress-db-env
 
 envVarGroups:
-- name: miles-soap-live-db-env
+- name: render-wordpress-db-env
   envVars:
   - key: MYSQL_DATABASE
-    value: miles-soap-live-db
+    value: render-wordpress-db
   - key: MYSQL_USER
-    value: miles-soap-live-db-user
+    value: render-wordpress-db-user
   - key: MYSQL_PASSWORD
     generateValue: true
   - key: MYSQL_ROOT_PASSWORD
