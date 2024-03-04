@@ -1,4 +1,6 @@
 [mysqld]
+
+innodb_force_recovery = 1
 # Needed for compatibility with existing SQL clients / WordPress.
 default-authentication-plugin=mysql_native_password
 
