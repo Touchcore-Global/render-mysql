@@ -9,17 +9,5 @@ services:
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
-  - fromGroup: odiopay-live-be-db-env
-
-envVarGroups:
-- name: odiopay-live-be-db-env
-  envVars:
-  - key: MYSQL_DATABASE
-    value: odiopay-live-be-db
-  - key: MYSQL_USER
-    value: odiopay-live-be-db-user
-  - key: MYSQL_PASSWORD
-    generateValue: true
-  - key: MYSQL_ROOT_PASSWORD
-    generateValue: true
+  - fromGroup: odiopay-live-be-db
 
