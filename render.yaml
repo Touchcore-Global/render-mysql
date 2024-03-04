@@ -4,9 +4,5 @@ services:
   plan: standard
   env: docker
   autoDeploy: false
-  disk:
-    name: odiopay-staging-be-db-disk
-    mountPath: /var/lib/mysql
-    sizeGB: 10
   envVars:
-  - fromGroup: odiopay-staging-be-db-env
+  - fromGroup: odiopay-staging-be-db
