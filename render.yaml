@@ -10,16 +10,3 @@ services:
     sizeGB: 10
   envVars:
   - fromGroup: odiopay-staging-be-db-env
-
-envVarGroups:
-- name: odiopay-staging-be-db-env
-  envVars:
-  - key: MYSQL_DATABASE
-    value: odiopay-staging-be-db
-  - key: MYSQL_USER
-    value: odiopay-staging-be-db-user
-  - key: MYSQL_PASSWORD
-    generateValue: true
-  - key: MYSQL_ROOT_PASSWORD
-    generateValue: true
-
