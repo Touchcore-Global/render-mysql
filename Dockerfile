@@ -6,8 +6,6 @@ COPY config/user.cnf /etc/mysql/my.cnf
 
 RUN cd var/lib/mysql
 
-RUN rm -r ib_logfile*
-
 RUN mkdir "#innodb_redo"
 
 RUN chown mysql:mysql "#innodb_redo"
