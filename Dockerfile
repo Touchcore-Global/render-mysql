@@ -10,6 +10,3 @@ RUN mkdir "#innodb_redo"
 
 RUN chown mysql:mysql "#innodb_redo"
 
-RUN systemctl start mysql
-
-
