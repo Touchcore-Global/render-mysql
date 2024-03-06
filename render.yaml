@@ -6,7 +6,7 @@ services:
   autoDeploy: false
   disk:
     name: odiopay-staging-be-db-disk
-    mountPath: /var/lib/mysql
+    mountPath: /var/
     sizeGB: 10
   envVars:
   - fromGroup: odiopay-staging-be-db-env
